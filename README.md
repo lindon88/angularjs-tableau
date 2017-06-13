@@ -55,6 +55,8 @@ You can use the following commands:
 For more info on Tableau configuration, see Tableau's [JavaScript API documentation]
 (http://onlinehelp.tableau.com/current/api/js_api/en-us/help.htm)
 
-## Making a Release
+## Credits
+
+Credit to https://github.com/effectiveinc/angular-tableau for creating the original implementation
 
 TBD
