@@ -11,6 +11,10 @@ It's built with [Angular 1.4.x](https://angularjs.org) and [Gulp.js](http://gulp
 1. Install the component (e.g. with Bower). If needed, manually add a script tag to your HTML to load the 
   lib/tableau.js file
   
+      ````
+      bower install angularjs-tableau --save
+      ````
+  
 2. Add a dependency on the `angularjs.tableau` module in your Angular app module:
 
       ````
