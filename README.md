@@ -63,4 +63,6 @@ For more info on Tableau configuration, see Tableau's [JavaScript API documentat
 
 Credit to https://github.com/effectiveinc/angular-tableau for creating the original implementation
 
-TBD
+## License
+
+Mit License: http://www.opensource.org/licenses/mit-license.php
