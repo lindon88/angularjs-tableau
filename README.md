@@ -1,6 +1,7 @@
 # AngularJS Directive for Tableau
 
 [![Bower version](https://badge.fury.io/bo/angularjs-tableau.svg)](https://badge.fury.io/bo/angularjs-tableau)
+[![Build Status](https://travis-ci.org/jensenkd/angularjs-tableau.svg?branch=master)](https://travis-ci.org/jensenkd/angularjs-tableau)
 
 This is an Angular module that provides a service and directive for easily embedding Tableau visualizations within
 your Angular app.
