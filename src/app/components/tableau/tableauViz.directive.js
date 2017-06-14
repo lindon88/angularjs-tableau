@@ -57,7 +57,7 @@
           // Implement callbacks for each event if passed in.
           if (scope.onCustomViewLoad && angular.isDefined(attrs.onCustomViewLoad)) {
             viz.addEventListener('customViewLoad', function (events) {
-              $log.log("Event 'customViewLoad' has fired");         
+              $log.log("Event 'customViewLoad' has fired");     
               scope.onCustomViewLoad({ arg1: events });
             });
           }
@@ -146,5 +146,4 @@
     return directive;
 
   }
-
 })();
