@@ -33,7 +33,19 @@ It's built with [Angular 1.4.x](https://angularjs.org) and [Gulp.js](http://gulp
   Example:
     `<div eui-tableau-viz="MyWorkbook/MyViz" viz-height="200px"></div>`
     
-5. Events
+5. Events:
+The following events are available in the directive.  You can assign a callback to any of them.
+    - onCustomViewLoad
+    - onCustomViewRemove
+    - onCustomViewSave
+    - onCustomViewSetDefault
+    - onFilterChange
+    - onMarksSelection
+    - onParameterChange
+    - onStoryPointSwitch
+    - onTabSwitch
+    - onToolbarStateChange
+    - onVizResize
 
 6. Filters
 
