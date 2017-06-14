@@ -10,12 +10,6 @@
     // Enable log
     $logProvider.debugEnabled(true);
 
-    // Configure tableau options
-    // tableauProvider.configure({
-    //   host: 'https://public.tableau.com',
-    //   siteRoot: '/views/'
-    // });
-
     tableauProvider.setDefaultOptions({
       hideToolbar: true,
       hideTabs: true
