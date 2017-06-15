@@ -7,7 +7,7 @@ This is an Angular module that provides a service and directive for easily embed
 your Angular app.
 
 It's built with [Angular 1.4.x](https://angularjs.org) and [Gulp.js](http://gulpjs.com) and targets modern browsers 
-(latest Chrome, Firefox, and Safari, IE10+) and Tableau Server 9.1 - 9.3.
+(latest Chrome, Firefox, and Safari, IE10+) and Tableau Server 9.1 - 9.3, 10.1 - 10.3.
 
 ## Usage
 
