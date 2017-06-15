@@ -60,8 +60,7 @@ The following events are available in the directive.  You can assign a callback 
     width: '300px', // string : Can be any valid CSS size specifier. If not specified, defaults to the published width of the view.
     device: 'desktop', // string : Specifies a device layout for a dashboard, if it exists. Values can be desktop, tablet, or phone. If not specified, defaults to loading a layout based on the smallest dimension of the hosting iframe element.
     "filter name": '124', // string : Apply a filter that you specify to the view when it is first rendered. For example, if you have an Academic Year filter and only want to display data for 2017, you might enter "Academic Year": "2016". For more information, see Filtering.
-    onFirstInteractive: callback(), // callback : Callback function that is invoked when the Viz object first becomes interactive. This is only called once, but it’s guaranteed to be called. If the Viz object is already interactive, it will be called immediately, but on a separate "thread."
-Note: If a listener has been attached to the CUSTOM_VIEW_LOAD event, that event is raised after the callback function specified for onFirstInteractive has been called.
+    onFirstInteractive: callback(), // callback : Callback function that is invoked when the Viz object first becomes interactive. This is only called once, but it’s guaranteed to be called. If the Viz object is already interactive, it will be called immediately, but on a separate "thread." Note: If a listener has been attached to the CUSTOM_VIEW_LOAD event, that event is raised after the callback function specified for onFirstInteractive has been called.
     onFirstVizSizeKnown: callback(event), // callback(e: VizResizeEvent) : Callback function that's invoked when the size of the Viz object is known. You can use this callback to perform tasks such as resizing the elements surrounding the Viz object once the object's size has been established.
 }
 ````
