@@ -53,13 +53,13 @@ The following events are available in the directive.  You can assign a callback 
 6. Filters
 ````
 { 
-    hideTabs: true // bool : Indicates whether tabs are hidden or shown.
+    hideTabs: true, // bool : Indicates whether tabs are hidden or shown.
+    hideToolbar: true, // bool : Indicates whether the toolbar is hidden or shown.
+    instanceIdToClone: '', //	string : Specifies the ID of an existing instance to make a copy (clone) of. This is useful if the user               wants to continue analysis of an existing visualization without losing the state of the original. If the ID does not refer               to an existing visualization, the cloned version is derived from the original visualization.
 }
 ````
-hideToolbar
-bool
-Indicates whether the toolbar is hidden or shown.
-instanceIdToClone	string	Specifies the ID of an existing instance to make a copy (clone) of. This is useful if the user wants to continue analysis of an existing visualization without losing the state of the original. If the ID does not refer to an existing visualization, the cloned version is derived from the original visualization.
+
+
 height
 string
 Can be any valid CSS size specifier. If not specified, defaults to the published height of the view.
