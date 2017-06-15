@@ -52,8 +52,6 @@ The following events are available in the directive.  You can assign a callback 
 
 6. Options
 
-Fields
-
 | Name   |      Type      |  Description |
 |:----------|:-------------:|:------|
 | hideTabs |  bool | Indicates whether tabs are hidden or shown. |
