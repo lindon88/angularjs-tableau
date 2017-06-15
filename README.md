@@ -27,14 +27,14 @@ It's built with [Angular 1.4.x](https://angularjs.org) and [Gulp.js](http://gulp
 3. Currently, you must manually add the Tableau Server script tag to your main HTML page, per the 
   [Tableau instructions](http://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api_concepts_get_API.htm) 
   
-4. To embed a visualization, decorate a `div` or other element with the `eui-tableau-viz` attribute. The value of
+4. To embed a visualization, decorate a `div` or other element with the `tableau-viz` attribute. The value of
   this attribute should be the workbook/view path for the desired visualization, as defined on the Tableau server
   (this can be found in Tableau embed code blocks as the "name" parameter. Encoded HTML entities should be decoded, 
   so e.g. if your Tableau embed code contains `<param name='name' value='MyWorkbook&#47;MyViz' />`, enter this as
   `MyWorkbook/MyViz`). Also, you'll need to specify a `viz-height` attribute on the same element, to tell the 
   visualization how tall it should be (its width will behave like a block-level element and fill its container).
   Example:
-    `<div eui-tableau-viz="MyWorkbook/MyViz" viz-height="200px"></div>`
+    `<div tableau-viz="MyWorkbook/MyViz" viz-height="200px"></div>`
     
 5. Events:
 The following events are available in the directive.  You can assign a callback to any of them.
