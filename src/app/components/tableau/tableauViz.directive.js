@@ -3,16 +3,16 @@
 
   angular
     .module('angularjs.tableau')
-    .directive('euiTableauViz', euiTableauViz);
+    .directive('tableauViz', TableauViz);
 
   /** @ngInject */
-  function euiTableauViz(tableau, $log) {
+  function TableauViz(tableau, $log) {
     var directive = {
       restrict: 'A',
       scope: {
-        path: '@euiTableauViz',
+        path: '@tableauViz',
         vizHeight: '@',
-        filters: '=',
+        options: '=',
         onCustomViewLoad: '&',
         onCustomViewRemove: '&',
         onCustomViewSave: '&',
@@ -46,8 +46,8 @@
             height: value
           });
 
-          if (scope.filters) {
-            angular.merge(options, scope.filters);
+          if (scope.options) {
+            angular.merge(options, scope.options);
           }
 
           // TODO: May want a way to lazy-init visualizations as they are scrolled into view
@@ -144,6 +144,5 @@
     };
 
     return directive;
-
   }
 })();

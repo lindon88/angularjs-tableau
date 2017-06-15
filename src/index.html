@@ -27,8 +27,9 @@
     <div class="container" ng-controller="MainController as main">
       <article ng-repeat="viz in main.visualizations">
         <h1>{{ viz.title }}</h1>
-        <div eui-tableau-viz="{{ viz.path }}" on-parameter-change="myCallback(arg1)" filters="filterObj" viz-height="600px"></div>
+        <div tableau-viz="{{ viz.path }}" on-parameter-change="myCallback(arg1)" options="filterObj" viz-height="200px"></div>
       </article>
+      
     </div>
 
     <!-- update this to reflect your actual Tableau server -->

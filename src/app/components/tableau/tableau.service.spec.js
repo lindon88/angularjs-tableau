@@ -17,10 +17,6 @@
     }));
     beforeEach(module(function (tableauProvider) {
       // grab the provider and configure it as we would in a module .config function
-      tableauProvider.configure({
-        host: 'http://testHostValue/',
-        siteRoot: 'testSiteRootValue/'
-      });
       tableauProvider.setDefaultOptions({
         hideToolbar: true,
         hideTabs: true
@@ -33,10 +29,6 @@
 
     it('should expose the tableau JavaScript API', function() {
       expect(tableau.api).toBe(tableauAPIMock);
-    });
-
-    it('should create a dashboard view URL in the expected format based on the configuration', function() {
-      expect(tableau.createUrl('myWorkbook/myView')).toBe('http://testHostValue/testSiteRootValue/views/myWorkbook/myView');
     });
 
     it('should create options by adding to/overriding the default options that were set', function() {

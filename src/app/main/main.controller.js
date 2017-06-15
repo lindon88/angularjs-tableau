@@ -12,7 +12,10 @@
     vm.visualizations = [];
 
     $scope.filterObj = {
-      'Msa Id': "2"
+      'Msa Id': "2",
+       hideToolbar: false,
+       hideTabs: false,
+       height: '600px'
     };
 
     $scope.myCallback = function (results) {
