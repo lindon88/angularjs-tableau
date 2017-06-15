@@ -66,7 +66,7 @@ The following events are available in the directive.  You can assign a callback 
 
 Example
 ````
-{ 
+$scope.myOptions = { 
     hideTabs: true, 
     hideToolbar: true,
     height: '300px',
@@ -76,6 +76,7 @@ Example
     onFirstInteractive: InitFirstInstance(),
 }
 ````
+ `<div tableau-viz="http://public.tableau.com/MyWorkbook/MyViz" options="myOptions" viz-height="200px"></div>`
 
 ## Contributing
 
