@@ -50,7 +50,7 @@ The following events are available in the directive.  You can assign a callback 
     - onToolbarStateChange
     - onVizResize
 
-6. Filters
+6. Options
 ````
 { 
     hideTabs: true, // bool : Indicates whether tabs are hidden or shown.
