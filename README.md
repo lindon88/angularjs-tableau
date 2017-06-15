@@ -51,9 +51,11 @@ The following events are available in the directive.  You can assign a callback 
     - onVizResize
 
 6. Filters
-`  { 
-`    hideTabs: true // bool : Indicates whether tabs are hidden or shown.
-`  }
+````
+{ 
+    hideTabs: true // bool : Indicates whether tabs are hidden or shown.
+}
+````
 hideToolbar
 bool
 Indicates whether the toolbar is hidden or shown.
