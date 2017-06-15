@@ -51,6 +51,42 @@ The following events are available in the directive.  You can assign a callback 
     - onVizResize
 
 6. Options
+
+Fields
+|Name|Type|Description|
+|---|---|---|
+|hideTabs|bool|Indicates whether tabs are hidden or shown.|
+|hideToolbar|bool|Indicates whether the toolbar is hidden or shown.|
+|   |   |   |
+Fields
+Name
+Type
+Description
+hideTabs
+bool
+Indicates whether tabs are hidden or shown.
+hideToolbar
+bool
+Indicates whether the toolbar is hidden or shown.
+instanceIdToClone	string	Specifies the ID of an existing instance to make a copy (clone) of. This is useful if the user wants to continue analysis of an existing visualization without losing the state of the original. If the ID does not refer to an existing visualization, the cloned version is derived from the original visualization.
+height
+string
+Can be any valid CSS size specifier. If not specified, defaults to the published height of the view.
+width
+string
+Can be any valid CSS size specifier. If not specified, defaults to the published width of the view.
+device
+string
+Specifies a device layout for a dashboard, if it exists. Values can be desktop, tablet, or phone. If not specified, defaults to loading a layout based on the smallest dimension of the hosting iframe element.
+"filter name"	string	Apply a filter that you specify to the view when it is first rendered. For example, if you have an Academic Year filter and only want to display data for 2017, you might enter "Academic Year": "2016". For more information, see Filtering.
+onFirstInteractive
+callback(e: TableauEvent)
+Callback function that is invoked when the Viz object first becomes interactive. This is only called once, but it’s guaranteed to be called. If the Viz object is already interactive, it will be called immediately, but on a separate "thread."
+Note: If a listener has been attached to the CUSTOM_VIEW_LOAD event, that event is raised after the callback function specified for onFirstInteractive has been called.
+onFirstVizSizeKnown
+callback(e: VizResizeEvent)
+Callback function that's invoked when the size of the Viz object is known. You can use this callback to perform tasks such as resizing the elements surrounding the Viz object once the object's size has been established.
+Example
 ````
 { 
     hideTabs: true, // bool : Indicates whether tabs are hidden or shown.
