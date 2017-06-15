@@ -32,7 +32,7 @@
     }));
 
     function compile(template) {
-      el = angular.element(template || '<div eui-tableau-viz="testWorkbook/testView" viz-height="100px"></div>');
+      el = angular.element(template || '<div tableau-viz="testWorkbook/testView" viz-height="100px"></div>');
       scope = $rootScope.$new();
 
       $compile(el)(scope);
@@ -61,7 +61,7 @@
 
     it('should tell the viz to update its frame size if the viz height changes after creation', function() {
       $rootScope.opts = { height: '150px' };
-      compile('<div eui-tableau-viz="testWorkbook/testView" viz-height="{{ opts.height }}"></div>');
+      compile('<div tableau-viz="testWorkbook/testView" viz-height="{{ opts.height }}"></div>');
       $rootScope.opts.height = '200px';
       $rootScope.$apply();
       expect(vizInstanceMock.setFrameSize).toHaveBeenCalledWith(undefined, '200px');
