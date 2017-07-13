@@ -37,18 +37,28 @@ It's built with [Angular 1.4.x](https://angularjs.org) and [Gulp.js](http://gulp
     `<div tableau-viz="MyWorkbook/MyViz" viz-height="200px"></div>`
     
 5. Events:
-The following events are available in the directive.  You can assign a callback to any of them.
-    - onCustomViewLoad
-    - onCustomViewRemove
-    - onCustomViewSave
-    - onCustomViewSetDefault
-    - onFilterChange
-    - onMarksSelection
-    - onParameterChange
-    - onStoryPointSwitch
-    - onTabSwitch
-    - onToolbarStateChange
-    - onVizResize
+
+| Name   |      Event Class Passed in Callback      |  Description |
+|----------|-------------|------|
+| onCustomViewLoad |  CustomViewEvent | Raised when a custom view has finished loading. This event is raised after the callback function for onFirstInteractive (if any) has been called. |
+| onCustomViewRemove |    CustomViewEvent   | Raised when the user removes a custom view. |
+| onCustomViewSave | CustomViewEvent | Raised when the user saves a new or existing custom view. |
+| onCustomViewSetDefault | CustomViewEvent | Raised when a custom view has been made the default view for this visualization. |
+| onFilterChange | FilterEvent | Raised when any filter has changed state. The Viz object may not be interactive yet. |
+| onMarksSelection | MarksEvent | Raised when marks are selected or deselected. |
+| onParameterChange | ParameterEvent | Raised when any parameter has changed state. |
+| onStoryPointSwitch | StoryPointSwitchEvent | Raised after a story point becomes active. |
+| onTabSwitch | TabSwitchEvent | Raised after the tab switched, but the Viz object may not yet be interactive. |
+| onToolbarStateChange | ToolbarStateEvent | Raised when the state of the specified toolbar button changes. |
+| onVizResize | VizResizeEvent | Raised every time the frame size is calculated from the available size and the Viz object's published size. |
+
+ Example:
+   ````
+   $scope.marksSelection = function (marksSelectionEvent) { 
+      console.log(marksSelectionEvent.getEventName());
+    }
+   ````
+    `<div tableau-viz="MyWorkbook/MyViz" viz-height="200px" on-marks-selection="marksSelection(marksSelectionEvent)"></div>`
 
 6. Options
 
@@ -66,7 +76,7 @@ The following events are available in the directive.  You can assign a callback 
 
 Example
 ````
-{ 
+$scope.myOptions = { 
     hideTabs: true, 
     hideToolbar: true,
     height: '300px',
@@ -76,6 +86,7 @@ Example
     onFirstInteractive: InitFirstInstance(),
 }
 ````
+ `<div tableau-viz="http://public.tableau.com/MyWorkbook/MyViz" options="myOptions" viz-height="200px"></div>`
 
 ## Contributing
 
