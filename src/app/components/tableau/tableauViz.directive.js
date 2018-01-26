@@ -53,10 +53,10 @@
         createViz();
 
         // We need to rebuild the dashboard periodically to accommodate session timeouts. This is pretty hacky though. :/
-        var stop = $interval(function rebuild() {
-          viz.dispose();
-          createViz();
-        }, 300000);
+        //var stop = $interval(function rebuild() {
+        //  viz.dispose();
+        //  createViz();
+        //}, 300000);
 
         // Destroy the dashboard and interval timers upon destroying directive.
         scope.$on('$destroy', function () {
