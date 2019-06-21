@@ -48,6 +48,7 @@
           // TODO: May want a way to lazy-init visualizations as they are scrolled into view
           // (especially on mobile devices, to avoid overloading the browser)
           viz = new tableau.api.Viz(element[0], scope.path, options);
+          scope.$emit('viz-loaded', {viz: viz});
         }
 
         createViz();
